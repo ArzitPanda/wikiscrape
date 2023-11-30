@@ -39,7 +39,7 @@ def scrape_website(search,n):
 
       # text = anchor_tag.text.strip()  # Get the text inside the anchor tag
     # print(words)
-    wordArray = words.split()
+    wordArray = words.lower().split()
     word_counts = Counter(wordArray)
 
     # Get the most common words
@@ -52,4 +52,4 @@ def scrape_website(search,n):
     print(f"Failed to retrieve the page. Status code: {response.status_code}")
 
 
-scrape_website("india",5)
+scrape_website("india",100)
